@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  backend:
+    image: backend
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    image: frontend
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - 1234:1234
+    restart: unless-stopped
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    links:
+      - backend
