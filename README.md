@@ -1,6 +1,6 @@
 # ⚡ ThunderLoja ⚡
 
-Repositório que uno o backend com o frontend
+Repositório que une o backend com o frontend.
 
 ## 🚀 Para rodar a aplicação
 
